@@ -26,33 +26,49 @@ append_profile_uuid_to_list() {
 # @return none
 # @since 0.2.0
 apply() {
-  local \
-    nord0="#2E3440" \
-    nord1="#3B4252" \
-    nord3="#4C566A" \
-    nord4="#D8DEE9" \
-    nord5="#E5E9F0" \
-    nord6="#ECEFF4" \
-    nord7="#8FBCBB" \
-    nord8="#88C0D0" \
-    nord9="#81A1C1" \
-    nord11="#BF616A" \
-    nord13="#EBCB8B" \
-    nord14="#A3BE8C" \
-    nord15="#B48EAD"
-  local \
-    nord0_rgb="rgb(46,52,64)"
-    nord1_rgb="rgb(59,66,82)"
-    nord4_rgb="rgb(216,222,233)"
-    nord8_rgb="rgb(136,192,208)"
+  local nord0="#2E3440"  # - Polar Night 0 (darkest)
+  local nord1="#3B4252"  # - Polar Night 1
+  local nord2="#434C5E"  # - Polar Night 2
+  local nord3="#4C566A"  # - Polar Night 3
 
-  _write palette "['$nord1', '$nord11', '$nord14', '$nord13', '$nord9', '$nord15', '$nord8', '$nord5', '$nord3', '$nord11', '$nord14', '$nord13', '$nord9', '$nord15', '$nord7', '$nord6']"
+  local nord4="#D8DEE9"  # - Snow Storm 0 (darkest)
+  local nord5="#E5E9F0"  # - Snow Storm 1
+  local nord6="#ECEFF4"  # - Snow Storm 2
+
+  local nord7="#8FBCBB"  # - Frost 0 (green-blue)
+  local nord8="#88C0D0"  # - Frost 1 (light-blue)
+  local nord9="#81A1C1"  # - Frost 2 (storm-blue)
+  local nord10="#5E81AC" # - Frost 3 (darkest-blue) 
+
+  local nord11="#BF616A" # - Aurora 0 (red)
+  local nord12="#D08770" # - Aurora 1 (orange)
+  local nord13="#EBCB8B" # - Aurora 2 (yellow)
+  local nord14="#A3BE8C" # - Aurora 3 (green)
+  local nord15="#B48EAD" # - Aurora 4 (purple)
+
+  local nord27="#75D7D5" # - Frost Sat 0 (green-blue)
+  local nord28="#6FCDE7" # - Frost Sat 1 (light-blue)
+  local nord29="#6AA1D7" # - Frost Sat 2 (storm-blue)
+  local nord30="#437EC7" # - Frost Sat 3 (darkest-blue)
+
+  local nord31="#DD4048" # - Aurora Sat 0 (red)
+  local nord32="#ED7854" # - Aurora Sat 1 (orange)
+  local nord33="#FFD175" # - Aurora Sat 2 (yellow)
+  local nord34="#A2DD6E" # - Aurora Sat 3 (green)
+  local nord35="#CD74BD" # - Aurora Sat 4 (purple)
+
+  local nord0_rgb="rgb(46,52,64)"
+  local nord1_rgb="rgb(59,66,82)"
+  local nord4_rgb="rgb(216,222,233)"
+  local nord8_rgb="rgb(136,192,208)"
+
+  _write palette "['$nord1', '$nord11', '$nord14', '$nord13', '$nord9', '$nord15', '$nord8', '$nord5', '$nord3', '$nord31', '$nord34', '$nord33', '$nord29', '$nord35', '$nord7', '$nord6']"
   log 4 "Applied Nord color palette"
 
   _write background-color "'$nord0'"
   _write foreground-color "'$nord4'"
   _write use-transparent-background "false"
-  log 4 "Applied background- and foreground colors"
+  log 4 "Applied background and foreground colors"
 
   _write bold-color "'$nord4'"
   _write bold-color-same-as-fg "true"
